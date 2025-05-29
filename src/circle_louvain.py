@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ========== PARAMETER ==========
 MAX_CIRCLE_SIZE = 5
 INPUT_FILE = "data/dummy/dummy_circle_input.csv"
-OUTPUT_CIRCLE = "data/output/circle_output.csv"
+OUTPUT_CIRCLE = "data/output/circle_output_2.csv"
 OUTPUT_UNMATCHED = "data/output/unmatched.csv"
 
 # ========== STEP 1: LOAD DATA ==========
@@ -28,7 +28,6 @@ G = nx.Graph()
 def feature_string(row):
     return " ".join([
         row["Topik"].lower(),
-        row["Waktu"].lower(),
         row["Mode"].lower(),
         row["Gaya"].lower()
     ])
